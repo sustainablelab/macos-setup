@@ -6,7 +6,7 @@ My setup for working on MacOS.
 - [Git](README.md#git)
 - [Brew](README.md#brew)
 - [Vim](README.md#vim)
-- [Safari](README.md#vim)
+- [Safari](README.md#safari)
 
 # Lastpass
 
