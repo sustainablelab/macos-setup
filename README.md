@@ -1,5 +1,13 @@
 My setup for working on MacOS.
 
+## Table of Contents
+
+- [Terminal](README.md#terminal)
+- [Git](README.md#git)
+- [Brew](README.md#brew)
+- [Vim](README.md#vim)
+- [Safari](README.md#vim)
+
 # Lastpass
 
 - Install Lastpass
@@ -154,8 +162,8 @@ submodules), and Vim works exactly the way I'm used to.
 
 ## Use my vimrc
 
-Clone repo `vim-dotvim` in the home directory and use the name
-`.vim` instead of the default repo name `vim-dotvim`
+Clone private repo `vim-dotvim` in the home directory and use the
+name `.vim` instead of the default repo name `vim-dotvim`
 
 ```shell
 git clone https://github.com/sustainablelab/vim-dotvim.git ~/.vim
@@ -182,7 +190,10 @@ a repository named `vim-dotvim` on my computer, the repository
 clone is in the `.vim` folder, and that folder is created when I
 run this `git clone` command.
 
-# Open a local file in Safari
+# Safari
+
+- Add extensions for dark mode, and keyboard shortcuts.
+- Enable opening local files in Safari.
 
 ## Enable local files
 
@@ -200,3 +211,5 @@ Prefix the path with `file:///`, for example:
 file:///Users/sustainablelab/macos-setup/README.md
 ```
 
+Unfortunately, I haven't found a Safari extension for viewing
+Markdown.
