@@ -64,6 +64,124 @@ Shockingly, there is no keyboard shortcut to open a terminal.
 
 - `Ctrl+Cmd+F`
     - toggles fullscreen
+- `Cmd+N`
+    - open a new window (the Terminal application has to be open
+      and in focus)
+    - if a terminal window is already open, a new tab is added at
+      the end of the existing tabs
+- `Cmd+T`
+    - open a new window *using the pwd* of the Terminal window you
+      were in
+        - `Cmd+N` always opens to the Home directory
+    - open the new window in a tab *just right* of the tab you
+      were in
+        - `Cmd+N` opens the window as the last tab
+- `Cmd+1`
+    - go to first terminal tab
+- `Cmd+2`
+    - go to second terminal tab
+- `Cmd+3`
+    - go to second terminal tab
+    - etc.
+- `Cmd+W`
+    - close the active Terminal window
+    - closing the last Terminal window does not exit the Terminal
+      application
+    - you do not have to run `exit` before closing a Terminal
+- `Cmd+Q`
+    - Quit the Terminal application
+
+# Execute something from the Terminal
+
+*Remember to chmod before executing something.*
+
+Say I have a specific Python in this folder and I want to run it.
+I proceed it with a `./` to be clear I want the one **in this
+folder**, and not a matching `python3.8` found on the PATH.
+
+```shell
+% ./python3.8 -V
+```
+
+But I get the message this is an unrecognized command.
+
+I run `ls -l` and I see the file is **not executable**:
+
+```shell
+% ls -l ./python3.8
+-rw-r--r--  1 sustainablelab  staff  8816 Mar 30 13:20 python3.8
+```
+
+I need to make it executable before I can run it:
+
+```shell
+% chmod 744 ./python3.8
+% ls -l ./python3.8
+-rwxr--r--  1 sustainablelab  staff  8816 Mar 30 13:20 ./python3.8
+```
+
+Now this works:
+
+```shell
+% ./python3.8 -V
+3.8.5
+```
+
+
+# Terminal rc file customizations
+
+Customization goes in the `~/.zshrc` file. If the file does not
+exist, create it. This file (if it exists) is run every time a
+Terminal window is opened (`Cmd+N`).
+
+All the examples below go in the `~/.zshrc` file.
+
+## Use in Vi mode
+
+```bash
+set -o vi
+```
+
+## Aliases
+
+### ls in color
+
+Color files, folders, executables, etc. differently:
+
+```bash
+alias ls='ls -G'
+```
+
+### rm with prompt
+
+Prompt me before running the `rm` command:
+
+```bash
+alias rm='rm -i'
+```
+
+### Run Godot from the terminal
+
+```shell
+alias godot="~/godot/Godot.app/Contents/MacOS/Godot"
+```
+
+Open a terminal and launch Godot:
+
+```shell
+% godot
+```
+
+### Edit PATH
+
+Put a folder at the head of the PATH.
+
+This tells macOS to look in this folder before searching the
+usual places for the executable.
+
+```bash
+export PATH="/some/folder/with/executable:$PATH"
+```
 
 # Git
 
