@@ -83,6 +83,10 @@ Shockingly, there is no keyboard shortcut to open a terminal.
 - `Cmd+3`
     - go to second terminal tab
     - etc.
+- `Ctrl+Tab`
+    - next tab
+- `Ctrl+Shift+Tab`
+    - previous tab
 - `Cmd+W`
     - close the active Terminal window
     - closing the last Terminal window does not exit the Terminal
